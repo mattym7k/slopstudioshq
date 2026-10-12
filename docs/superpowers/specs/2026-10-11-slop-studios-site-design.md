@@ -41,7 +41,7 @@ Plain, direct sentences. No em dashes. One contact label on the whole page: "Sta
 6. Footer: wordmark, email, copyright.
 
 ## Placeholders to replace
-- `team@slopstudioshq.com` appears in nav, menu, hero, contact, footer. Swap once the
+- `contact@slopstudioshq.com` appears in nav, menu, hero, contact, footer. Swap once the
   business email exists.
 - Game Development photo is a picsum placeholder. Replace with a real game still,
   1200x750 or larger. The CSS tints any photo toward the accent.

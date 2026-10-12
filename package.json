@@ -2,13 +2,11 @@
   "name": "slopstudioshq",
   "private": true,
   "version": "1.0.0",
-  "description": "Slop Studios marketing site. Static HTML, deployed to Cloudflare Pages.",
+  "description": "Slop Studios marketing site. Static HTML in public/, deployed to Cloudflare Pages from GitHub.",
   "scripts": {
-    "dev": "serve -l 5173 .",
-    "deploy": "node deploy.mjs"
+    "dev": "serve -l 5173 public"
   },
   "devDependencies": {
-    "serve": "^14.2.4",
-    "wrangler": "^4.0.0"
+    "serve": "^14.2.4"
   }
 }
