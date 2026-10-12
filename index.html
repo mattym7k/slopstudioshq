@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Slop Studios</title>
+  <meta name="description" content="Slop Studios is a growing development team that ships games, web3 software, and AI-driven virtual influencers." />
+  <link rel="canonical" href="https://slopstudioshq.com/" />
+  <meta property="og:url" content="https://slopstudioshq.com/" />
+  <meta property="og:title" content="Slop Studios" />
+  <meta property="og:description" content="Games, on-chain products, and AI creators." />
+  <meta name="theme-color" content="#09090b" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Icon sprite: Phosphor Icons (light weight), MIT license. -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-controller" viewBox="0 0 256 256"><path d="M176,110H152a6,6,0,0,1,0-12h24a6,6,0,0,1,0,12ZM104,98H94V88a6,6,0,0,0-12,0V98H72a6,6,0,0,0,0,12H82v10a6,6,0,0,0,12,0V110h10a6,6,0,0,0,0-12ZM239.84,199.5A34,34,0,0,1,212,214,34.11,34.11,0,0,1,188,204.05l-.26-.28L147.38,158H108.62L68.31,203.76,68,204A34,34,0,0,1,44,214a34,34,0,0,1-33.46-39.91s0-.06,0-.1L26.9,89.88A57.89,57.89,0,0,1,83.89,42H172a58.07,58.07,0,0,1,57.05,47.63c0,.07,0,.12,0,.19L245.46,174s0,.07,0,.11A33.75,33.75,0,0,1,239.84,199.5ZM172,146a46,46,0,0,0,0-92H83.89A45.9,45.9,0,0,0,38.71,92a.36.36,0,0,0,0,.1L22.33,176.23a22,22,0,0,0,37.11,19.45l42-47.65a6,6,0,0,1,4.5-2Zm61.67,30.23-9.79-50.35A58.06,58.06,0,0,1,172,158h-8.63l33.19,37.68a22,22,0,0,0,37.11-19.45Z"/></symbol>
+    <symbol id="i-cube" viewBox="0 0 256 256"><path d="M222.72,67.9l-88-48.17a13.9,13.9,0,0,0-13.44,0l-88,48.18A14,14,0,0,0,26,80.18v95.64a14,14,0,0,0,7.28,12.27l88,48.18a13.92,13.92,0,0,0,13.44,0l88-48.18A14,14,0,0,0,230,175.82V80.18A14,14,0,0,0,222.72,67.9ZM127,30.25a2,2,0,0,1,1.92,0L212.51,76,128,122.24,43.49,76ZM39,177.57a2,2,0,0,1-1-1.75V86.66l84,46V223Zm177.92,0L134,223V132.64l84-46v89.16A2,2,0,0,1,217,177.57Z"/></symbol>
+    <symbol id="i-persona" viewBox="0 0 256 256"><path d="M222,40V76a6,6,0,0,1-12,0V46H180a6,6,0,0,1,0-12h36A6,6,0,0,1,222,40Zm-6,134a6,6,0,0,0-6,6v30H180a6,6,0,0,0,0,12h36a6,6,0,0,0,6-6V180A6,6,0,0,0,216,174ZM76,210H46V180a6,6,0,0,0-12,0v36a6,6,0,0,0,6,6H76a6,6,0,0,0,0-12ZM40,82a6,6,0,0,0,6-6V46H76a6,6,0,0,0,0-12H40a6,6,0,0,0-6,6V76A6,6,0,0,0,40,82Zm136,92a6,6,0,0,1-4.8-2.4,54,54,0,0,0-86.4,0,6,6,0,1,1-9.6-7.2,65.65,65.65,0,0,1,29.69-22.26,38,38,0,1,1,46.22,0A65.65,65.65,0,0,1,180.8,164.4,6,6,0,0,1,176,174Zm-48-36a26,26,0,1,0-26-26A26,26,0,0,0,128,138Z"/></symbol>
+    <symbol id="i-arrow-up-right" viewBox="0 0 256 256"><path d="M198,64V168a6,6,0,0,1-12,0V78.48L68.24,196.24a6,6,0,0,1-8.48-8.48L177.52,70H88a6,6,0,0,1,0-12H192A6,6,0,0,1,198,64Z"/></symbol>
+    <symbol id="i-arrow-down" viewBox="0 0 256 256"><path d="M204.24,148.24l-72,72a6,6,0,0,1-8.48,0l-72-72a6,6,0,0,1,8.48-8.48L122,201.51V40a6,6,0,0,1,12,0V201.51l61.76-61.75a6,6,0,0,1,8.48,8.48Z"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 256 256"><path d="M222,128a6,6,0,0,1-6,6H40a6,6,0,0,1,0-12H216A6,6,0,0,1,222,128ZM40,70H216a6,6,0,0,0,0-12H40a6,6,0,0,0,0,12ZM216,186H40a6,6,0,0,0,0,12H216a6,6,0,0,0,0-12Z"/></symbol>
+    <symbol id="i-close" viewBox="0 0 256 256"><path d="M204.24,195.76a6,6,0,1,1-8.48,8.48L128,136.49,60.24,204.24a6,6,0,0,1-8.48-8.48L119.51,128,51.76,60.24a6,6,0,0,1,8.48-8.48L128,119.51l67.76-67.75a6,6,0,0,1,8.48,8.48L136.49,128Z"/></symbol>
+  </svg>
+
+  <header class="nav-wrap">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="#top" aria-label="Slop Studios, back to top">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-word">Slop<span>Studios</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#approach">Approach</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a class="btn btn--sm" href="mailto:team@slopstudioshq.com">
+        <span>Start a project</span>
+        <span class="btn-ico" aria-hidden="true"><svg><use href="#i-arrow-up-right"/></svg></span>
+      </a>
+      <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+        <svg class="ico-menu"><use href="#i-menu"/></svg>
+        <svg class="ico-close"><use href="#i-close"/></svg>
+      </button>
+    </nav>
+  </header>
+
+  <div class="menu" id="menu" hidden>
+    <a href="#services" style="--i:0">Services</a>
+    <a href="#approach" style="--i:1">Approach</a>
+    <a href="#contact" style="--i:2">Contact</a>
+    <a class="menu-mail" href="mailto:team@slopstudioshq.com" style="--i:3">Start a project</a>
+  </div>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1 class="reveal">Games, on-chain products, and AI creators.</h1>
+          <p class="lead reveal" style="--d:90ms">
+            Slop Studios is a growing development team that ships games, web3 software, and virtual influencers for clients and for ourselves.
+          </p>
+          <div class="cta-row reveal" style="--d:180ms">
+            <a class="btn" href="mailto:team@slopstudioshq.com">
+              <span>Start a project</span>
+              <span class="btn-ico" aria-hidden="true"><svg><use href="#i-arrow-up-right"/></svg></span>
+            </a>
+            <a class="btn btn--ghost" href="#services">
+              <span>See services</span>
+              <span class="btn-ico" aria-hidden="true"><svg><use href="#i-arrow-down"/></svg></span>
+            </a>
+          </div>
+        </div>
+        <div class="hero-visual reveal" style="--d:120ms">
+          <div class="shell">
+            <div class="core core--canvas">
+              <canvas id="field" aria-label="Animated wireframe terrain rendered in real time"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="container">
+        <h2 class="reveal">Three things we build.</h2>
+        <div class="bento">
+          <article class="shell cell cell--a reveal">
+            <div class="core">
+              <div class="cell-media">
+                <!-- Placeholder photo. Replace with a real still from one of your games, 1200x750 or larger. -->
+                <img class="cell-img" src="https://picsum.photos/seed/slop-studios-game-dev/1200/750" alt="" loading="lazy" width="1200" height="750" />
+              </div>
+              <div class="cell-body">
+                <svg class="ico"><use href="#i-controller"/></svg>
+                <h3>Game Development</h3>
+                <p>Prototype to launch across PC, console, mobile, and web. Gameplay systems, multiplayer, technical art, and the tooling that keeps a game alive after release.</p>
+                <ul class="tags">
+                  <li>Unity</li><li>Unreal</li><li>Godot</li><li>Multiplayer</li><li>Live ops</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="shell cell cell--b reveal" style="--d:90ms">
+            <div class="core">
+              <div class="cell-body">
+                <svg class="ico"><use href="#i-cube"/></svg>
+                <h3>Web3 &amp; Software Development</h3>
+                <p>Smart contracts, on-chain game economies, wallets, and the ordinary web and backend work that makes those products usable.</p>
+                <ul class="tags">
+                  <li>Solidity</li><li>Rust</li><li>EVM</li><li>Solana</li><li>TypeScript</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="shell cell cell--c reveal" style="--d:180ms">
+            <div class="core">
+              <div class="cell-body">
+                <svg class="ico"><use href="#i-persona"/></svg>
+                <h3>AI Influencer Creation</h3>
+                <p>Virtual personas with a consistent face, voice, and posting schedule. We design the character and build the pipeline that runs it.</p>
+                <ul class="tags">
+                  <li>Diffusion</li><li>LLM agents</li><li>Voice</li><li>Content pipelines</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="approach" id="approach">
+      <div class="container">
+        <h2 class="reveal">How we work.</h2>
+        <div class="steps">
+          <div class="step reveal">
+            <h3>Scope</h3>
+            <p>A short discovery sprint turns your idea into a buildable spec with a real budget and timeline.</p>
+          </div>
+          <div class="step reveal" style="--d:90ms">
+            <h3>Ship</h3>
+            <p>You get a playable or usable build every cycle, so there is always something concrete to react to.</p>
+          </div>
+          <div class="step reveal" style="--d:180ms">
+            <h3>Automate</h3>
+            <p>Pipelines, agents, and tooling keep the product running after launch without a standing team.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="shell reveal">
+          <div class="core core--contact">
+            <h2>Have something to build?</h2>
+            <p class="lead">Send a few lines about what you are making and where it needs to run. You will hear back within two business days.</p>
+            <a class="btn btn--lg" href="mailto:team@slopstudioshq.com">
+              <span>Start a project</span>
+              <span class="btn-ico" aria-hidden="true"><svg><use href="#i-arrow-up-right"/></svg></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-row">
+      <a class="brand" href="#top" aria-label="Slop Studios, back to top">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-word">Slop<span>Studios</span></span>
+      </a>
+      <a class="footer-mail" href="mailto:team@slopstudioshq.com">team@slopstudioshq.com</a>
+      <span class="footer-copy">&copy; <span id="year">2026</span> Slop Studios</span>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
