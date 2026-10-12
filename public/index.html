@@ -39,7 +39,7 @@
         <li><a href="#approach">Approach</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <a class="btn btn--sm" href="mailto:contact@slopstudioshq.com">
+      <a class="btn btn--sm" href="#contact">
         <span>Start a project</span>
         <span class="btn-ico" aria-hidden="true"><svg><use href="#i-arrow-up-right"/></svg></span>
       </a>
@@ -54,7 +54,7 @@
     <a href="#services" style="--i:0">Services</a>
     <a href="#approach" style="--i:1">Approach</a>
     <a href="#contact" style="--i:2">Contact</a>
-    <a class="menu-mail" href="mailto:contact@slopstudioshq.com" style="--i:3">Start a project</a>
+    <a class="menu-mail" href="#contact" style="--i:3">Start a project</a>
   </div>
 
   <main id="top">
@@ -66,7 +66,7 @@
             Slop Studios is a growing development team that ships games, web3 software, and virtual influencers for clients and for ourselves.
           </p>
           <div class="cta-row reveal" style="--d:180ms">
-            <a class="btn" href="mailto:contact@slopstudioshq.com">
+            <a class="btn" href="#contact">
               <span>Start a project</span>
               <span class="btn-ico" aria-hidden="true"><svg><use href="#i-arrow-up-right"/></svg></span>
             </a>
@@ -160,12 +160,42 @@
       <div class="container">
         <div class="shell reveal">
           <div class="core core--contact">
-            <h2>Have something to build?</h2>
-            <p class="lead">Send a few lines about what you are making and where it needs to run. You will hear back within two business days.</p>
-            <a class="btn btn--lg" href="mailto:contact@slopstudioshq.com">
-              <span>Start a project</span>
-              <span class="btn-ico" aria-hidden="true"><svg><use href="#i-arrow-up-right"/></svg></span>
-            </a>
+            <div class="contact-intro">
+              <h2>Have something to build?</h2>
+              <p class="lead">Tell us what you are making and where it needs to run. You will hear back within two business days.</p>
+            </div>
+            <form class="form" id="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+              <!-- Web3Forms access key. Get one at web3forms.com using contact@slopstudioshq.com. -->
+              <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY" />
+              <input type="hidden" name="subject" value="New project inquiry from slopstudioshq.com" />
+              <input type="hidden" name="from_name" value="Slop Studios website" />
+              <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+              <div class="field">
+                <label for="f-name">Name</label>
+                <input id="f-name" name="name" type="text" autocomplete="name" required />
+                <p class="field-error" id="e-name" hidden>Please enter your name.</p>
+              </div>
+              <div class="field">
+                <label for="f-email">Email</label>
+                <input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" required />
+                <p class="field-error" id="e-email" hidden>Please enter a valid email so we can reply.</p>
+              </div>
+              <div class="field field--full">
+                <label for="f-message">What are you building?</label>
+                <textarea id="f-message" name="message" rows="5" required></textarea>
+                <p class="field-hint">Platform, timeline, and budget range help us answer faster.</p>
+                <p class="field-error" id="e-message" hidden>Tell us a little about the project.</p>
+              </div>
+
+              <div class="form-row">
+                <button class="btn btn--lg" type="submit">
+                  <span class="btn-label">Start a project</span>
+                  <span class="btn-ico" aria-hidden="true"><svg><use href="#i-arrow-up-right"/></svg></span>
+                </button>
+                <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+              </div>
+            </form>
           </div>
         </div>
       </div>

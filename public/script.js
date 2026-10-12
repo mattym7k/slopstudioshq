@@ -7,6 +7,78 @@
   var year = document.getElementById("year");
   if (year) year.textContent = String(new Date().getFullYear());
 
+  /* Contact form: posts to Web3Forms and reports inline. */
+  var form = document.getElementById("contact-form");
+  if (form) {
+    var status = document.getElementById("form-status");
+    var submitBtn = form.querySelector("button[type=submit]");
+    var label = submitBtn.querySelector(".btn-label");
+
+    function setError(id, show) {
+      var err = document.getElementById("e-" + id);
+      var field = form.querySelector("[name=" + id + "]").closest(".field");
+      err.hidden = !show;
+      field.classList.toggle("is-invalid", show);
+    }
+
+    var f = form.elements;
+
+    function validate() {
+      var name = f.name.value.trim();
+      var email = f.email.value.trim();
+      var message = f.message.value.trim();
+      var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      setError("name", !name);
+      setError("email", !emailOk);
+      setError("message", message.length < 10);
+      return name && emailOk && message.length >= 10;
+    }
+
+    ["name", "email", "message"].forEach(function (id) {
+      f[id].addEventListener("input", function () {
+        if (f[id].closest(".field").classList.contains("is-invalid")) validate();
+      });
+    });
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      status.className = "form-status";
+      status.textContent = "";
+      if (!validate()) {
+        form.querySelector(".is-invalid input, .is-invalid textarea").focus();
+        return;
+      }
+      if (f.botcheck.checked) return;
+
+      submitBtn.disabled = true;
+      label.textContent = "Sending";
+
+      var data = new FormData(form);
+      data.delete("botcheck");
+
+      fetch(form.action, {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: data
+      })
+        .then(function (r) { return r.json().then(function (j) { return { ok: r.ok && j.success, j: j }; }); })
+        .then(function (res) {
+          if (!res.ok) throw new Error(res.j && res.j.message);
+          form.reset();
+          status.className = "form-status is-ok";
+          status.textContent = "Sent. We will reply within two business days.";
+        })
+        .catch(function () {
+          status.className = "form-status is-err";
+          status.textContent = "Something went wrong. Email us at contact@slopstudioshq.com instead.";
+        })
+        .finally(function () {
+          submitBtn.disabled = false;
+          label.textContent = "Start a project";
+        });
+    });
+  }
+
   /* Mobile menu */
   var menuBtn = document.querySelector(".menu-btn");
   var menu = document.getElementById("menu");
