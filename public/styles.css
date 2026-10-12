@@ -302,16 +302,10 @@ section { position: relative; }
   width: 100%;
   aspect-ratio: 16 / 10;
   object-fit: cover;
-  filter: grayscale(1) contrast(1.1) brightness(0.85);
+  object-position: center 40%;
+  image-rendering: auto;
 }
-/* Tint any photo toward the accent so replacements stay on-palette. */
-.cell-media::before {
-  content: "";
-  position: absolute; inset: 0;
-  background: var(--accent);
-  mix-blend-mode: color;
-  opacity: 0.55;
-}
+/* Fade the bottom edge into the card surface so the text sits cleanly below. */
 .cell-media::after {
   content: "";
   position: absolute; inset: 0;
